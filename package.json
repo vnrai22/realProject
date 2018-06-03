@@ -1,0 +1,16 @@
+{
+  "name": "realproject",
+  "version": "1.0.0",
+  "description": "Static pages using nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Vinay Rai",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5"
+  }
+}

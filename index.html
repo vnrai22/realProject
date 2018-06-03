@@ -1,0 +1,71 @@
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="myStyle.css"/>
+
+
+  <title>My Website</title>
+</head>
+   <body>
+
+     <header>
+        <h2>Welcome to my Application</h2>
+     </header>
+     <div class="class1">
+       <form>
+         Id: <input type="text" name="userId" placeholder="Enter Id">
+         Name: <input type="text" name = "userName">
+       </form>
+     </div>
+     <div class="class1">
+       <form>
+       Title: <input type= "text" name= "title">
+       Research Details <textarea name="detailedResearch" placeholder="Write detailed reserch"></textarea> 
+       Research attachment <input type="file">
+     </form>
+     </div>
+     <div class="controller">
+       <form>
+         <input onclick="showDiv(event,'callpage1','page1')" type="checkbox" id="callpage1" value="call Page1"> call Page 1 </br>
+         <input onclick="showDiv(event,'callpage2','page2')" type="checkbox" id="callpage2" value="call Page2"> call Page 2 </br>
+         <input onclick="showDiv(event,'callpage3','page3')" type="checkbox" id="callpage3" value="call Page3"> call Page 3 </br>
+       </form>
+     </div>
+
+     <div id="page1" class="newPage">
+       <p>This is Page 1</p>
+    </div>
+    <div id="page2" class="newPage">
+      <p>This is Page 2</p>
+    </div>
+    <div id="page3" class="newPage">
+      <h3>This is Page 3</h3>
+      <form  action= '/process_post' method = "POST">
+         First Name: <input type = "text" name = "first_name">  <br>
+         Last Name: <input type = "text" name = "last_name">
+         <input type = "submit" value = "submit">
+      </form>
+    </div>
+
+
+      <footer>@2018 my Site</footer>
+<script>
+  function showDiv(evt, cp, p){
+    
+      //document.getElementById(page1).style.color="red";
+     var checkbox= document.getElementById(cp);
+     var page1 = document.getElementById(p);
+     if(checkbox.checked){
+       //alert('checked');
+      page1.style.display="block";
+     }
+     else{
+      page1.style.display="none";       
+
+     }
+     
+      
+  }
+</script>
+   </body>
+</html>
